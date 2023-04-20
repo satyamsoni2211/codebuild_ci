@@ -21,6 +21,14 @@ Checking for other options:
 python -m codebuild --help
 ```
 
+### Integrate with Bitbucket Pipeline
+
+```yml
+- script:
+    - python -m pip install codebuild-ci
+    - python -m codebuild-ci --project project --log-group <aws log group>
+```
+
 ## contributing to code
 
 ---
