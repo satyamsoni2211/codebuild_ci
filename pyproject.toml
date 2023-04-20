@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "codebuild_ci"
+version = "0.1.0"
+description = "Command line utility to trigger and wait for Code build Pipeline to complete"
+authors = ["satyam soni"]
+readme = "README.md"
+packages = [
+    { include = "codebuild_ci" },
+]
+include = [
+    "CHANGELOG.md",
+    "README.md"
+]
+license = "MIT"
+homepage="https://github.com/satyamsoni2211/codebuild_ci"
+repository="https://github.com/satyamsoni2211/codebuild_ci"
+keywords = [
+    "python",
+    "aws",
+    "codebuild",
+    "ci",
+    "devops",
+    "cli"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AWS CDK",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.26.116"
+typer = {extras = ["all"], version = "^0.7.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+
+
+[tool.poetry.group.test.dependencies]
+flake8 = "^6.0.0"
+tox = "^4.4.12"
+
+[tool.poetry.scripts]
+codebuild = 'codebuild_ci.__main__:run'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
