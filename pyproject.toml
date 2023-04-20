@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "codebuild_ci"
-version = "0.1.0"
+version = "0.2.0"
 description = "Command line utility to trigger and wait for Code build Pipeline to complete"
 authors = ["satyam soni"]
 readme = "README.md"
@@ -34,7 +34,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9"
 boto3 = "^1.26.116"
 typer = {extras = ["all"], version = "^0.7.0"}
 
